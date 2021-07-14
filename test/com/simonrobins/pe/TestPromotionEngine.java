@@ -34,8 +34,12 @@ class TestPromotionEngine {
 
 	@Test
 	void testCountUniqueSKUs() {
+		Map<Character, Integer> groupedSKUs = PromotionEngine.countUniqueSKUs("AAABBBBBCCCCCCCDDDDDDDDD");
+
 		Character[] expectedKeys = { 'A', 'B', 'C', 'D' };
-		Map<Character, Integer> groupedSKUs = PromotionEngine.countUniqueSKUs("AAABBBBBCD");
 		assertArrayEquals(expectedKeys, groupedSKUs.keySet().toArray());
+
+		Integer[] expectedValues = { 3, 5, 7, 9 };
+		assertArrayEquals(expectedValues, groupedSKUs.values().toArray());
 	}
 }
