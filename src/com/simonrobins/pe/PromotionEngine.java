@@ -93,7 +93,15 @@ public class PromotionEngine {
 			Integer numberOfCs = skuMap.get('C');
 			Integer numberOfDs = skuMap.get('D');
 
-			if(numberOfCs > numberOfDs)
+			if(0 == numberOfCs)
+			{
+				return numberOfDs * 15.0;
+			}
+			else if(0 == numberOfDs)
+			{
+				return numberOfCs * 20.0;
+			}
+			else if(numberOfCs > numberOfDs)
 			{
 				return  ((numberOfCs - numberOfDs) * 45.0) + numberOfCs * 20.0;
 			}
