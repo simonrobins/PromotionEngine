@@ -16,14 +16,16 @@ class TestPromotionEngine {
 	@Test
 	void testScenarioB() {
 		Double cost = PromotionEngine.calculateOrderCost("AAAAABBBBBC");
-		assertEquals(100, cost);
+		assertEquals(370, cost);
 		cost = PromotionEngine.calculateOrderCost("CBBBBBAAAAA");
-		assertEquals(100, cost);
+		assertEquals(370, cost);
 	}
 
 	@Test
 	void testScenarioC() {
 		Double cost = PromotionEngine.calculateOrderCost("AAABBBBBCD");
-		assertEquals(100, cost);
+		assertEquals(280, cost);
+		cost = PromotionEngine.calculateOrderCost("DCBBBBBAAA");
+		assertEquals(280, cost);
 	}
 }
