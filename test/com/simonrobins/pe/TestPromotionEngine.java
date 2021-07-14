@@ -1,6 +1,9 @@
 package com.simonrobins.pe;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,5 +30,12 @@ class TestPromotionEngine {
 		assertEquals(280, cost);
 		cost = PromotionEngine.calculateOrderCost("DCBBBBBAAA");
 		assertEquals(280, cost);
+	}
+
+	@Test
+	void testCountUniqueSKUs() {
+		Character[] expectedKeys = { 'A', 'B', 'C' };
+		Map<Character, Integer> groupedSKUs = PromotionEngine.countUniqueSKUs("AAABBBBBCD");
+		assertArrayEquals(expectedKeys, groupedSKUs.keySet().toArray());
 	}
 }

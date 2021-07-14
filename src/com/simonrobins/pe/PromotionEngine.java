@@ -5,10 +5,19 @@ import java.util.Map;
 
 public class PromotionEngine {
 	public static Double calculateOrderCost(final String skus) {
-		return 0.0;
+
+		Map<Character, Integer> groupedSKUs = countUniqueSKUs(skus);
+
+		Double cost = 0.0;
+
+		for (Map.Entry<Character, Integer> entry : groupedSKUs.entrySet()) {
+			
+		}
+
+		return cost;
 	}
 
-	private static Map<Character, Integer> countUniqueSKUs(final String skus) {
+	protected static Map<Character, Integer> countUniqueSKUs(final String skus) {
 		Map<Character, Integer> groupedSKUs = new HashMap<>();
 
 		for (int i = 0; i < skus.length(); i++) {
@@ -19,7 +28,7 @@ public class PromotionEngine {
 			case 'B':
 			case 'C':
 				Integer count = groupedSKUs.get(sku);
-				if(null == count)
+				if (null == count)
 					groupedSKUs.put(sku, 1);
 				else
 					groupedSKUs.replace(sku, count + 1);
