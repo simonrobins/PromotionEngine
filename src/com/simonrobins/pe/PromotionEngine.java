@@ -24,7 +24,7 @@ public class PromotionEngine {
 		return cost;
 	}
 
-	protected static Map<Character, Integer> countUniqueSKUs(final String skus) {
+	private static Map<Character, Integer> countUniqueSKUs(final String skus) {
 		Map<Character, Integer> groupedSKUs = new HashMap<>();
 		groupedSKUs.put('A', 0);
 		groupedSKUs.put('B', 0);
