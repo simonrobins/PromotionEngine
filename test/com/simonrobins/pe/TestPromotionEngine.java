@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class TestPromotionEngine {
 	@Test
 	void testScenarioA() {
-		Integer cost = PromotionEngine.calculateOrderCost("ABC");
+		Double cost = PromotionEngine.calculateOrderCost("ABC");
 		assertEquals(100, cost);
 		cost = PromotionEngine.calculateOrderCost("CBA");
 		assertEquals(100, cost);
@@ -18,7 +18,7 @@ class TestPromotionEngine {
 
 	@Test
 	void testScenarioB() {
-		Integer cost = PromotionEngine.calculateOrderCost("AAAAABBBBBC");
+		Double cost = PromotionEngine.calculateOrderCost("AAAAABBBBBC");
 		assertEquals(370, cost);
 		cost = PromotionEngine.calculateOrderCost("CBBBBBAAAAA");
 		assertEquals(370, cost);
@@ -26,7 +26,7 @@ class TestPromotionEngine {
 
 	@Test
 	void testScenarioC() {
-		Integer cost = PromotionEngine.calculateOrderCost("AAABBBBBCD");
+		Double cost = PromotionEngine.calculateOrderCost("AAABBBBBCD");
 		assertEquals(280, cost);
 		cost = PromotionEngine.calculateOrderCost("DCBBBBBAAA");
 		assertEquals(280, cost);
