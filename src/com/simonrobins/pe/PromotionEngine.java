@@ -27,6 +27,7 @@ public class PromotionEngine {
 			case 'A':
 			case 'B':
 			case 'C':
+			case 'D':
 				Integer count = groupedSKUs.get(sku);
 				if (null == count)
 					groupedSKUs.put(sku, 1);
