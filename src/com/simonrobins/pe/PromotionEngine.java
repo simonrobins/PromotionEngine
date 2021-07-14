@@ -103,11 +103,11 @@ public class PromotionEngine {
 			}
 			else if(numberOfCs > numberOfDs)
 			{
-				return  ((numberOfCs - numberOfDs) * 45.0) + numberOfCs * 20.0;
+				return  ((numberOfCs - numberOfDs) * 20.0) + numberOfCs * 30.0;
 			}
 			else
 			{
-				return  ((numberOfDs - numberOfCs) * 45.0) + numberOfDs * 15.0;
+				return  ((numberOfDs - numberOfCs) * 15.0) + numberOfDs * 30.0;
 				
 			}
 		}		
